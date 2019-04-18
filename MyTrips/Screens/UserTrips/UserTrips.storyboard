@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pWc-K0-mPe">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Trips-->
+        <scene sceneID="gX0-Gk-ZPe">
+            <objects>
+                <viewController id="RyP-sl-Wnl" customClass="UserTripsViewController" customModule="MyTrips" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3MY-uu-YQ3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="i5q-AM-aKs">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="RyP-sl-Wnl" id="XIu-3q-2U7"/>
+                                    <outlet property="delegate" destination="RyP-sl-Wnl" id="mO6-AL-Pgc"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBW-h7-sDy">
+                                <rect key="frame" x="289" y="581" width="56" height="56"/>
+                                <color key="backgroundColor" red="0.18823529411764706" green="0.44313725490196076" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="TnU-8W-MXr"/>
+                                    <constraint firstAttribute="height" constant="56" id="U8Y-2W-uC9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="6"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onAddTrip:" destination="RyP-sl-Wnl" eventType="touchUpInside" id="KF0-hf-YHz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No trips yet!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lec-Oc-VbD">
+                                <rect key="frame" x="0.0" y="116" width="375" height="521"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="i5q-AM-aKs" firstAttribute="leading" secondItem="dQY-aB-MLI" secondAttribute="leading" id="PCW-lr-Uaj"/>
+                            <constraint firstItem="i5q-AM-aKs" firstAttribute="top" secondItem="dQY-aB-MLI" secondAttribute="top" id="SMR-Y1-uTV"/>
+                            <constraint firstAttribute="right" secondItem="EBW-h7-sDy" secondAttribute="right" constant="30" id="XZ6-RL-V4G"/>
+                            <constraint firstAttribute="bottom" secondItem="EBW-h7-sDy" secondAttribute="bottom" constant="30" id="Xo8-u2-aed"/>
+                            <constraint firstItem="Lec-Oc-VbD" firstAttribute="leading" secondItem="dQY-aB-MLI" secondAttribute="leading" id="f4L-rN-rpV"/>
+                            <constraint firstItem="dQY-aB-MLI" firstAttribute="bottom" secondItem="Lec-Oc-VbD" secondAttribute="bottom" constant="30" id="gdr-mk-31r"/>
+                            <constraint firstAttribute="bottom" secondItem="i5q-AM-aKs" secondAttribute="bottom" id="k2J-Dy-wJw"/>
+                            <constraint firstItem="dQY-aB-MLI" firstAttribute="trailing" secondItem="i5q-AM-aKs" secondAttribute="trailing" id="pB8-oA-emT"/>
+                            <constraint firstItem="Lec-Oc-VbD" firstAttribute="top" secondItem="dQY-aB-MLI" secondAttribute="top" id="pQS-Z4-ksN"/>
+                            <constraint firstItem="dQY-aB-MLI" firstAttribute="trailing" secondItem="Lec-Oc-VbD" secondAttribute="trailing" id="uFh-0r-DBJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dQY-aB-MLI"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Trips" id="RKN-vt-SM4">
+                        <barButtonItem key="rightBarButtonItem" title="Print" id="2xB-ex-v5f">
+                            <connections>
+                                <action selector="onAction:" destination="RyP-sl-Wnl" id="In2-XA-Ntk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="statusLabel" destination="Lec-Oc-VbD" id="Qsj-kb-75s"/>
+                        <outlet property="tableView" destination="i5q-AM-aKs" id="hEP-Oi-Rzn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gno-Z3-9Dj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1256" y="-71"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xte-tF-0Zg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pWc-K0-mPe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="ESh-Uo-Dle">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RyP-sl-Wnl" kind="relationship" relationship="rootViewController" id="ZBX-Wv-UDu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UVV-Gi-Nxt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-143.19999999999999" y="-16.641679160419791"/>
+        </scene>
+    </scenes>
+</document>
