@@ -46,7 +46,10 @@ class UserTripsViewController: UIViewController, TripEditorViewControllerDelegat
 
         self.setStatusMessage(nil)
         
-        self.refresh()
+        self.startLoadingAnimation()
+        self.refresh{
+            self.stopLoadingAnimation()
+        }
         
         self.addSearchController()
     }
@@ -159,9 +162,13 @@ class UserTripsViewController: UIViewController, TripEditorViewControllerDelegat
         return Network.listAllUserTrips
     }
     
-    @objc func refresh() {
+    @objc func refresh(completion:(()->Void)? = nil) {
         self.listUserNetworkCall()(self.userInfo){ (userTrips, error) in
+            self.stopLoadingAnimation()
             if let error = error {
+                if let fn = completion {
+                   fn()
+                }
                 self.showMessageBox(title: "Error", message: error)
             } else {
                 self.tableView.refreshControl?.endRefreshing()
@@ -170,6 +177,9 @@ class UserTripsViewController: UIViewController, TripEditorViewControllerDelegat
                     self.tableView.reloadData()
                 }
                 self.updateStatusMessage()
+                if let fn = completion {
+                    fn()
+                }
             }
         }
     }

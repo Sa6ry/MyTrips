@@ -34,15 +34,21 @@ class UsersViewController: UITableViewController {
             return
         }
         
-        self.refresh()
+        self.startLoadingAnimation()
+        self.refresh {
+            self.stopLoadingAnimation()
+        }
     }
     
     // MARK: - Helpers
-    
-    func refresh() {
+    func refresh(completion:(()->Void)?=nil) {
         self.listUsers { (users, error) in
+            self.stopLoadingAnimation()
             self.users = users
             self.tableView.reloadData()
+            if let fn = completion {
+                fn()
+            }
         }
     }
 
