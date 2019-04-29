@@ -20,7 +20,6 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knU-6K-kcr">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="onStopEditing:" destination="0bV-qo-nFu" eventType="touchUpInside" id="kMT-oH-bOx"/>
                                 </connections>
