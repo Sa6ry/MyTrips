@@ -29,7 +29,9 @@ extension AuthViewController {
             if let error = error {
                 self.showMessageBox(title: "Error",message: error)
             } else {
-                self.navigationController?.popToRootViewController(animated: false)
+                if let nv:UINavigationController = self.presentingViewController as? UINavigationController {
+                    nv.popToRootViewController(animated: false)
+                }
                 self.dismiss(animated: true, completion: nil)
             }
         }

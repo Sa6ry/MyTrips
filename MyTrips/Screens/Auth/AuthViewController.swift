@@ -19,8 +19,7 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwrodTextField: UITextField!
     @IBOutlet weak var authMainButton: UIButton!
-    @IBOutlet weak var moveToSignupButton: UIButton!
-    
+    @IBOutlet weak var moveToSignupButton: UIButton!    
     @IBOutlet weak var keyboardConstraint: NSLayoutConstraint!
     
     var authType: AuthType!
