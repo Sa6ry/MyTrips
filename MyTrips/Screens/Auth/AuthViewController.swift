@@ -77,6 +77,9 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func onStopEditing(_ sender: Any) {
+        self.hideKeyboard()
+    }
     
     // MARK: - Helpers
     func hideKeyboard() {

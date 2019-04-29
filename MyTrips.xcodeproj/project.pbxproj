@@ -33,6 +33,7 @@
 		1FAA3173226973E000B780C0 /* UserTrips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FAA3172226973E000B780C0 /* UserTrips.storyboard */; };
 		1FCC049A2274436600C4841E /* UserTripsViewController+Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC04992274436600C4841E /* UserTripsViewController+Filter.swift */; };
 		1FCC049C22762AAC00C4841E /* UIViewController+LoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC049B22762AAC00C4841E /* UIViewController+LoadingAnimation.swift */; };
+		1FCC049E22779FFB00C4841E /* PassthroughStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC049D22779FFB00C4841E /* PassthroughStackView.swift */; };
 		1FFFEFDC226A994B007D14AB /* TripEditor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFEFDB226A994B007D14AB /* TripEditor.storyboard */; };
 		1FFFEFDE226A9993007D14AB /* TripEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFEFDD226A9993007D14AB /* TripEditorViewController.swift */; };
 		1FFFEFE2226A9A91007D14AB /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFEFE0226A9A91007D14AB /* TextFieldTableViewCell.swift */; };
@@ -95,6 +96,7 @@
 		1FAA3172226973E000B780C0 /* UserTrips.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserTrips.storyboard; sourceTree = "<group>"; };
 		1FCC04992274436600C4841E /* UserTripsViewController+Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserTripsViewController+Filter.swift"; sourceTree = "<group>"; };
 		1FCC049B22762AAC00C4841E /* UIViewController+LoadingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+LoadingAnimation.swift"; sourceTree = "<group>"; };
+		1FCC049D22779FFB00C4841E /* PassthroughStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassthroughStackView.swift; sourceTree = "<group>"; };
 		1FFFEFDB226A994B007D14AB /* TripEditor.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripEditor.storyboard; sourceTree = "<group>"; };
 		1FFFEFDD226A9993007D14AB /* TripEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripEditorViewController.swift; sourceTree = "<group>"; };
 		1FFFEFE0226A9A91007D14AB /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 				1FFFF004226CFF1C007D14AB /* AuthViewController.swift */,
 				1FFFF002226CF202007D14AB /* Auth.storyboard */,
 				1F42F6B3227031DA00F855D9 /* AuthNavigationController.swift */,
+				1FCC049D22779FFB00C4841E /* PassthroughStackView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				1F42F6B4227031DA00F855D9 /* AuthNavigationController.swift in Sources */,
 				1FFFEFF8226AFF2A007D14AB /* TripEditorProtocol.swift in Sources */,
 				1F42F6A6226F0EFE00F855D9 /* ViewController+Network.swift in Sources */,
+				1FCC049E22779FFB00C4841E /* PassthroughStackView.swift in Sources */,
 				1FFFEFE2226A9A91007D14AB /* TextFieldTableViewCell.swift in Sources */,
 				1F42F6B622726FD500F855D9 /* Auth+Login.swift in Sources */,
 				1FFFEFFD226B0476007D14AB /* UserTripsTableViewCell.swift in Sources */,
