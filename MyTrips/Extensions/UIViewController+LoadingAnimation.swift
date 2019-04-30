@@ -13,7 +13,7 @@ extension UIViewController {
 
     func startLoadingAnimation(userInteractionEnabled: Bool = false) {
         self.view.isUserInteractionEnabled = userInteractionEnabled
-        let activityData = ActivityData(color:UIColor.darkGray,backgroundColor:UIColor.init(white: 1.0, alpha: 0.1))
+        let activityData = ActivityData(color:UIColor.darkGray,displayTimeThreshold:1000,backgroundColor:UIColor.init(white: 1.0, alpha: 0.1))
         NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData,nil)
     }
     
