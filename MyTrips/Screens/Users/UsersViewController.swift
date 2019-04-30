@@ -43,9 +43,10 @@ class UsersViewController: UITableViewController {
     // MARK: - Helpers
     func refresh(completion:(()->Void)?=nil) {
         self.listUsers { (users, error) in
-            self.stopLoadingAnimation()
-            self.users = users
-            self.tableView.reloadData()
+            if error == nil {
+                self.users = users
+                self.tableView.reloadData()
+            }
             if let fn = completion {
                 fn()
             }

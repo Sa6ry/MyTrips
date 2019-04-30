@@ -36,7 +36,10 @@ extension UIViewController {
     }
     
     func listUsers(completion:@escaping (_ users: [UserInfo], _ error:String? )-> Void) {
-        if !Network.isLoggedIn() { return self.presentLoginScreen(animated: false) }
+        if !Network.isLoggedIn() {
+            completion([],"Not logged in")
+            return self.presentLoginScreen(animated: false)
+        }
         Network.listUsers(completion: completion)
     }
     
