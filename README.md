@@ -1,4 +1,4 @@
-# MyTrips
+# MyTrips (7 days project)
 
 MyTrips App, is a simple app that allows the users to log, search & print their past & future trips
 
